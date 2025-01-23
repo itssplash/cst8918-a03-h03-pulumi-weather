@@ -106,6 +106,8 @@ config:
 > [!IMPORTANT]
 > Please update the `prefixName` value to replace `<your-username>` with your correct college username. e.g. my username is `mckennr`, so my prefixName would be `cst8918-a03-mckennr`. We will use this prefixName in several places when creating various infrastructure resources.
 
+
+----- End of Feature 1
 ### Install some helper modules
 
 Since we are going to deploy Docker containers on Azure, you will need to install a couple of extra Pulumi modules. Make sure that you are still in the `infrastructure` folder, then run ...
@@ -146,6 +148,8 @@ const publicPort = config.requireNumber('publicPort')
 const cpu = config.requireNumber('cpu')
 const memory = config.requireNumber('memory')
 ```
+
+--- End of Feature 2
 
 #### Define the container registry
 
@@ -221,6 +225,7 @@ Outputs:
 > [!TIP]
 > OK now you can delete those last two `export` lines. You won't need them any more.
 
+---- End of Feature 3
 #### Create the Docker image and store it in the container registry
 
 Import the `@pulumi/docker` module at the top of the index.ts file and then append the container definition to the bottom of the file. Of note, the `build.platform` option tells Docker what the target runtime architecture is. This will make sure to pull the right base image when processing the Dockerfile.
@@ -251,6 +256,8 @@ Notice the code above references the `imageTag` variable. You can use this to as
 ```sh
 pulumi config set imageTag "v0.2.0"
 ```
+
+---- End of Feature 4
 
 #### Create an Azure Container App service container group
 
