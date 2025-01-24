@@ -1,5 +1,8 @@
 CST8918 - DevOps: Infrastructure as Code  
 Prof: Robert McKenney
+# Running Application Screenshot
+![lab-a03](https://github.com/user-attachments/assets/2c945a4a-5b81-45ed-85fe-74d8a8bc9528)
+
 
 # LAB-A03 Pulumi Weather App
 
