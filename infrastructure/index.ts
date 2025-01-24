@@ -87,7 +87,7 @@ const registryCredentials = containerregistry
             },
             {
               name: 'WEATHER_API_KEY',
-              value: '409546c89ded579d1c3f5c1aee7dc957',
+              value: config.requireSecret('weatherApiKey'),
             },
           ],
           resources: {
